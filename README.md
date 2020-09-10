@@ -32,7 +32,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 使用vue3 + vant3版本 + vue-i18n 支持3.0版本 + composition-api
 
-[composition-api](https://composition-api.vuejs.org/zh/)
+[composition-api](https://composition-api.vuejs.org/zh/api.html)
 
 [vant3](https://vant-contrib.gitee.io/vant/next/#/zh-CN/skeleton)
 

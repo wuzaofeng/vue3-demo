@@ -10,26 +10,19 @@
 
 <script>
 import { useI18n } from 'vue-i18n'
-import { setLang, i18n } from '@/lang'
-import { reactive } from 'vue'
+import { reactive, onMounted } from 'vue'
+import { checkLogin } from '@/api/user'
 
 export default {
   setup () {
     const { t } = useI18n()
     const state = reactive({
-      show: false
     })
 
-    const showHandle = () => {
-      console.log(state.show)
-      state.show = true
-    }
-
-    const changeLang = (lang) => {
-      setLang(lang)
-      console.log(i18n.global.locale.value)
-    }
-    return { t, state, showHandle, changeLang }
+    onMounted(() => {
+      checkLogin()
+    })
+    return { t, state }
   }
 }
 </script>

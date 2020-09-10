@@ -15,8 +15,7 @@ function init () {
 
 init()
 
-initVant(createApp(App))
-  .use(i18n)
+initVant(createApp(App).use(i18n))
   .use(store)
   .use(router)
   .mount('#app')

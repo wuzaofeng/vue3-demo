@@ -1,14 +1,18 @@
 {
-  "name": "hst-uc",
+  "name": "hs-h5-vue-uc-cust-data-modify",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve --mode dev",
+    "build": "vue-cli-service build --mode dev",
+    "build:daily": "vue-cli-service build --mode daily",
+    "build:beta": "vue-cli-service build --mode beta",
+    "build:prod": "vue-cli-service build --mode prod",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint --fix"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "core-js": "^3.6.5",
     "vant": "^3.0.0-alpha.4",
     "vue": "^3.0.0-0",

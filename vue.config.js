@@ -1,5 +1,7 @@
 const path = require('path')
-console.log(path.resolve(__dirname, 'src/assets/styles/modifyVars.less'))
+
+console.log(process.env.VUE_APP_API_URL_BROWSER)
+
 module.exports = {
   lintOnSave: true,
   css: {
