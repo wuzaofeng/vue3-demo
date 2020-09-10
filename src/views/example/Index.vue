@@ -7,6 +7,7 @@
     <van-calendar v-model:show="state.show" />
     {{ state.show }}
     {{ t('home') }}
+    <span class="test">测试rem</span>
   </div>
 </template>
 
@@ -35,3 +36,10 @@ export default {
   }
 }
 </script>
+
+<style lang="less" scoped>
+.test {
+  font-size: 14px;
+  display: flex;
+}
+</style>

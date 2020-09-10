@@ -12,22 +12,25 @@ import customEnUS from './en_US'
 import customZhCN from './zh_CN'
 import customZhTW from './zh_TW'
 
+const messages = {
+  [ENUM_LANG.enUS]: {
+    ...customEnUS,
+    ...enUS
+  },
+  [ENUM_LANG.zhCN]: {
+    ...customZhCN,
+    ...zhCN
+  },
+  [ENUM_LANG.zhHK]: {
+    ...customZhTW,
+    ...zhTW
+  }
+}
+
+console.log(messages)
 export const i18n = createI18n({
   locale: ENUM_LANG.zhCN, // 设置默认语言
-  messages: {
-    [ENUM_LANG.enUS]: {
-      ...customEnUS,
-      ...enUS
-    },
-    [ENUM_LANG.zhCN]: {
-      ...customZhCN,
-      ...zhCN
-    },
-    [ENUM_LANG.zhTW]: {
-      ...customZhTW,
-      ...zhTW
-    }
-  } // 设置资源文件对象
+  messages// 设置资源文件对象
 })
 
 // 切换语言
@@ -37,7 +40,7 @@ export const setLang = (lang) => {
     case ENUM_LANG.enUS:
       Locale.use('en-US', enUS)
       break
-    case ENUM_LANG.zhTW:
+    case ENUM_LANG.zhHK:
       Locale.use('zh-TW', zhTW)
       break
     default:
