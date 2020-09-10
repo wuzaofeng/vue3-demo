@@ -41,5 +41,6 @@ export default {
 .test {
   font-size: 14px;
   display: flex;
+  flex: 1;
 }
 </style>
