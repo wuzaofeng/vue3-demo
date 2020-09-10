@@ -2,8 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-
-import { Toast, Button, Calendar } from 'vant'
+import { initVant } from './vant'
 
 import { i18n, setLang, getUAgentLang } from '@/lang'
 
@@ -16,4 +15,8 @@ function init () {
 
 init()
 
-createApp(App).use(i18n).use(Toast).use(Button).use(Calendar).use(store).use(router).mount('#app')
+initVant(createApp(App))
+  .use(i18n)
+  .use(store)
+  .use(router)
+  .mount('#app')

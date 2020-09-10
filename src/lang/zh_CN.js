@@ -1,8 +1,11 @@
 const message = {
-  home: '首页',
-  about: '我的',
-  order: '订单',
-  noMore: '没有更多了'
+  persional: {
+    personalInfo: '个人信息',
+    contactWay: '联系方式',
+    addressInfo: '地址信息',
+    jobInfo: '工作信息',
+    financeInfo: '财务状况'
+  }
 }
 
 export default message
