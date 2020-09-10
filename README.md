@@ -35,3 +35,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 [composition-api](https://composition-api.vuejs.org/zh/)
 
 [vant3](https://vant-contrib.gitee.io/vant/next/#/zh-CN/skeleton)
+
+[vant3](https://github.com/youzan/vant/issues/7035)
+
+[自定义主题](https://github.com/youzan/vant/blob/dev/src/style/var.less)

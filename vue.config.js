@@ -1,19 +1,22 @@
+const path = require('path')
+console.log(path.resolve(__dirname, 'src/assets/styles/modifyVars.less'))
 module.exports = {
-  // lintOnSave: true,
-  // css: {
-  //   loaderOptions: {
-  //     postcss: {
-  //       plugins: [
-  //         require('postcss-pxtorem')({
-  //           rootValue: 16, // 换算的基数
-  //           selectorBlackList: [], // 忽略转换正则匹配项
-  //           propList: ['*']
-  //         }),
-  //         require('autoprefixer')
-  //       ]
-  //     }
-  //   }
-  // },
+  lintOnSave: true,
+  css: {
+    loaderOptions: {
+      less: {
+        modifyVars: {
+          // 直接覆盖变量
+          // 'text-color': '#111',
+          // blue: '#f00',
+          // 'border-color': '#eee'
+          // 或者可以通过 less 文件覆盖（文件路径为绝对路径）
+          hack: "true; @import '" + path.resolve(__dirname, 'src/assets/styles/modifyVars.less') + "'"
+          // hack: `@import ${path.resolve(__dirname, '/assets/styles/modifyVars.less')};`
+        }
+      }
+    }
+  },
   productionSourceMap: true,
   devServer: {
     port: 3001,
